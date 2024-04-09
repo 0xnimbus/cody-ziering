@@ -1,19 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import HomePage from './Components/HomePage/HomePage';
+import ZillowScraper from './Components/Scraper/ZillowScraper';
+import './index.css'
+import Button from '@mui/material/Button';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<string>('scraper');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage />;
+      case 'scraper':
+        return <ZillowScraper />;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div>
+      <div className='app-div'>
+        <div className='button'>
+          <Button 
+            variant='outlined'
+            size='large'
+            onClick={() => setCurrentPage('home')}
+            >
+              Home
+            </Button>
+        </div>
+        <div className='button'>
+          <Button 
+          variant='outlined'
+          size='large'
+          onClick={() => setCurrentPage('scraper')}
+          >
+            Zillow Scraper
+          </Button>
+        </div>
+      </div>
+        {renderPage()}
+      
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);

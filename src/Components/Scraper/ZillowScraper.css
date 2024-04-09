@@ -1,0 +1,23 @@
+.main-div{
+    justify-content: center;
+    text-align: center;
+}
+
+#location-input{
+    margin: 2%;
+
+}
+
+#location-button{
+    margin: 2%;
+}
+
+.title{
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.slider-div{
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
