@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <div className='app-div'>
         <div className='button'>
           <Button 
-            variant='outlined'
+            variant="contained"
             size='large'
             onClick={() => setCurrentPage('home')}
             >
@@ -33,7 +33,7 @@ const App: React.FC = () => {
         </div>
         <div className='button'>
           <Button 
-          variant='outlined'
+          variant="contained"
           size='large'
           onClick={() => setCurrentPage('scraper')}
           >

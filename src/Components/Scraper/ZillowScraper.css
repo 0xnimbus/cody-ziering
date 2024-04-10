@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
 .main-div{
     justify-content: center;
     text-align: center;
@@ -17,7 +21,30 @@
 }
 
 .slider-div{
-   margin-left: 5%;
-   margin-right: 5%;
+   margin-left: 15%;
+   margin-right: 15%;
 }
 
+.year-div{
+    display: flex;
+    justify-content: center;
+}
+
+.year-h1{
+    margin: 0.4% 1% 0 1%;
+    text-align: center;
+}
+
+.price-range-div{
+    display: flex;
+    justify-content: center;
+    margin: 0 2% 2% 2%
+}
+
+.price-h1{
+    margin: 1%
+}
+
+.price-title{
+    margin: 2% 0 0.5% 0 
+}
